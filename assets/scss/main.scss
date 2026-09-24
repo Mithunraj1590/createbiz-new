@@ -1,0 +1,30 @@
+// ==============================================================================
+// CREATEBIZ MAIN SCSS ENTRY POINT
+// ==============================================================================
+
+// Global Variables & Tokens
+@import 'variables';
+
+// Core Layout Components
+@import 'header';
+@import 'footer';
+
+// Page-Wise SCSS Modules
+@import 'home';
+@import 'business_setup';
+@import 'company_formation';
+@import 'corporate_services';
+@import 'advisory';
+@import 'about_us';
+@import 'cost_calculator';
+@import 'legal';
+
+// Base Global Reset / Body
+body {
+  font-family: $font-family-sans;
+  background-color: $bg-body;
+  color: $text-main;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}

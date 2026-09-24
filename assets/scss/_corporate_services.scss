@@ -1,0 +1,74 @@
+// ==============================================================================
+// CREATEBIZ CORPORATE SERVICES STYLES
+// Fully responsive with nested breakpoints inside class definitions
+// ==============================================================================
+
+.services-grid-page {
+  padding: 3.5rem 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 4.5rem 0;
+  }
+
+  .service-detail-card {
+    background-color: $color-white;
+    border-radius: $radius-xl;
+    padding: 2rem 1.5rem;
+    border: 1px solid $border-color;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    transition: all $transition-base;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 2.5rem 2rem;
+    }
+
+    .icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: $radius-md;
+      background-color: $primary-light;
+      color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 1.25rem;
+
+      @media (min-width: $breakpoint-md) {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+      }
+    }
+
+    .card-title {
+      font-family: $font-family-heading;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.85rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.45rem;
+      }
+    }
+
+    .card-desc {
+      font-size: 0.92rem;
+      color: $text-muted;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.98rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba($primary, 0.25);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+  }
+}

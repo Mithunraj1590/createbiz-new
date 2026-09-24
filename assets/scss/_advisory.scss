@@ -1,0 +1,47 @@
+// ==============================================================================
+// CREATEBIZ ADVISORY PAGE STYLES
+// Fully responsive with nested breakpoints inside class definitions
+// ==============================================================================
+
+.advisory-feature-section {
+  padding: 3.5rem 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 4.5rem 0;
+  }
+
+  .advisory-card {
+    background: $color-white;
+    border-radius: $radius-lg;
+    padding: 2rem 1.5rem;
+    border: 1px solid $border-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    height: 100%;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 2.5rem 2rem;
+    }
+
+    .advisory-title {
+      font-family: $font-family-heading;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.85rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.45rem;
+      }
+    }
+
+    .advisory-text {
+      font-size: 0.92rem;
+      color: $text-muted;
+      line-height: 1.65;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.98rem;
+      }
+    }
+  }
+}

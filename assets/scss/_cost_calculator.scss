@@ -1,0 +1,75 @@
+// ==============================================================================
+// CREATEBIZ COST CALCULATOR PAGE STYLES
+// Fully responsive with nested breakpoints inside class definitions
+// ==============================================================================
+
+.calculator-section {
+  padding: 3.5rem 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 4.5rem 0;
+  }
+
+  .calc-card {
+    background: $color-white;
+    border-radius: $radius-xl;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid $border-color;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 2.5rem;
+    }
+
+    .step-title {
+      font-family: $font-family-heading;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 1rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.35rem;
+      }
+    }
+
+    .option-radio-card {
+      border: 1px solid $border-color;
+      border-radius: $radius-md;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all $transition-fast;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      &:hover {
+        border-color: $primary;
+        background-color: rgba($primary, 0.03);
+      }
+
+      &.selected {
+        border-color: $primary;
+        background-color: $primary-light;
+      }
+    }
+
+    .cost-summary-box {
+      background-color: #f8fafc;
+      border-radius: $radius-lg;
+      padding: 1.5rem;
+      border: 1px solid $border-color;
+
+      .total-amount {
+        font-family: $font-family-heading;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $primary;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

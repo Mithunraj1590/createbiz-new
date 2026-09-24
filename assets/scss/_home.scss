@@ -1,0 +1,733 @@
+// ==============================================================================
+// CREATEBIZ HOME PAGE STYLES
+// Fully responsive with nested breakpoints inside class definitions
+// ==============================================================================
+
+.hero-banner {
+  position: relative;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0 2.5rem 0;
+  overflow: hidden;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 3.5rem 0 3rem 0;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    min-height: calc(100vh - 68px);
+    padding: 2.5rem 0;
+  }
+
+  @media (min-width: $breakpoint-xxxl) {
+    padding: 3.5rem 0;
+  }
+
+  .hero-glow-1 {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    pointer-events: none;
+
+    @media (min-width: $breakpoint-md) {
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  .hero-glow-2 {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    pointer-events: none;
+
+    @media (min-width: $breakpoint-md) {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .badge-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    background: rgba($primary, 0.08);
+    border: 1px solid rgba($primary, 0.2);
+    border-radius: $radius-full;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 1.25rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $primary;
+      display: inline-block;
+      box-shadow: 0 0 10px $primary;
+    }
+  }
+
+  .hero-title {
+    font-family: $font-family-heading;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $text-main;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 2.3rem;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 2.75rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 3.25rem;
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: $breakpoint-xxxl) {
+      font-size: 3.75rem;
+    }
+
+    .highlight-text {
+      color: $primary;
+      position: relative;
+    }
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 1.15rem;
+    }
+  }
+
+  .hero-search-form {
+    background: $color-white;
+    padding: 0.4rem;
+    border-radius: $radius-lg;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid $border-color;
+
+    .input-group-text {
+      font-size: 1.1rem;
+    }
+
+    .form-control {
+      font-size: 0.92rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1rem;
+      }
+    }
+
+    .btn-hero-primary {
+      background-color: $primary;
+      color: $color-white;
+      border-radius: $radius-md;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all $transition-base;
+      font-size: 0.92rem;
+      padding: 0.6rem 1.1rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+      }
+
+      &:hover {
+        background-color: $primary-hover;
+        color: $color-white;
+      }
+    }
+  }
+
+  .hero-stats-inline {
+    margin-top: 2rem;
+    gap: 1rem 0;
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: 2.5rem;
+    }
+
+    .stat-item {
+      .stat-number {
+        font-family: $font-family-heading;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $text-main;
+        line-height: 1.1;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 1.75rem;
+        }
+
+        @media (min-width: $breakpoint-xl) {
+          font-size: 2rem;
+        }
+
+        span {
+          color: $primary;
+        }
+      }
+
+      .stat-label {
+        font-size: 0.78rem;
+        color: $text-muted;
+        margin: 0;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    margin-top: 2rem;
+
+    @media (min-width: $breakpoint-lg) {
+      margin-top: 0;
+    }
+
+    .main-hero-img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: $radius-xl;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      border: 4px solid $color-white;
+
+      @media (min-width: $breakpoint-md) {
+        max-height: 440px;
+      }
+
+      @media (min-width: $breakpoint-xl) {
+        max-height: 460px;
+      }
+
+      @media (min-width: $breakpoint-xxl) {
+        max-height: 500px;
+      }
+
+      @media (min-width: $breakpoint-xxxl) {
+        max-height: 540px;
+      }
+    }
+
+    .floating-badge-1,
+    .floating-badge-2 {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      padding: 0.6rem 0.9rem;
+      border-radius: $radius-lg;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 2;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 0.85rem 1.25rem;
+        gap: 0.85rem;
+      }
+
+      .badge-icon-box {
+        width: 36px;
+        height: 36px;
+        border-radius: $radius-md;
+        background: $primary-light;
+        color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+
+        @media (min-width: $breakpoint-md) {
+          width: 44px;
+          height: 44px;
+          font-size: 1.3rem;
+        }
+      }
+
+      .badge-content {
+        .title {
+          font-weight: 700;
+          font-size: 0.9rem;
+          color: $text-main;
+          line-height: 1.2;
+
+          @media (min-width: $breakpoint-md) {
+            font-size: 1rem;
+          }
+        }
+
+        .subtitle {
+          font-size: 0.72rem;
+          color: $text-muted;
+
+          @media (min-width: $breakpoint-md) {
+            font-size: 0.78rem;
+          }
+        }
+      }
+    }
+
+    .floating-badge-1 {
+      top: 10px;
+      left: 5px;
+
+      @media (min-width: $breakpoint-md) {
+        top: 25px;
+        left: -20px;
+      }
+    }
+
+    .floating-badge-2 {
+      bottom: 10px;
+      right: 5px;
+
+      @media (min-width: $breakpoint-md) {
+        bottom: 25px;
+        right: -15px;
+      }
+    }
+  }
+}
+
+// Trusted Section
+.trusted-section {
+  background-color: $color-white;
+  padding: 2rem 0;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 2.5rem 0;
+  }
+
+  .section-label {
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $text-muted;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 0.82rem;
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  .trusted-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.25rem 1.5rem;
+
+    @media (min-width: $breakpoint-lg) {
+      justify-content: space-between;
+      gap: 1.5rem 1rem;
+    }
+
+    .trusted-badge-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.95rem;
+      }
+
+      i {
+        font-size: 1.15rem;
+        color: #94a3b8;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+// Services Section Preview
+.services-section {
+  padding: 3.5rem 0;
+  background-color: $bg-body;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 4.5rem 0;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    padding: 5.5rem 0;
+  }
+
+  .section-badge {
+    color: $primary;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 0.85rem;
+    }
+  }
+
+  .section-title {
+    font-family: $font-family-heading;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $text-main;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 2.3rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 2.75rem;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    color: $text-muted;
+    max-width: 640px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 1.1rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  .service-card {
+    background-color: $color-white;
+    border-radius: $radius-xl;
+    padding: 1.75rem 1.5rem;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all $transition-base;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 2.25rem 2rem;
+    }
+
+    .icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: $radius-lg;
+      background-color: $primary-light;
+      color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
+
+      @media (min-width: $breakpoint-md) {
+        width: 52px;
+        height: 52px;
+        font-size: 1.45rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .card-title {
+      font-family: $font-family-sans;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.65rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: $text-muted;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .learn-more-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: $primary;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all $transition-fast;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.92rem;
+      }
+
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.07);
+      border-color: rgba($primary, 0.2);
+
+      .icon-box {
+        background-color: $primary;
+        color: $color-white;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Why Choose Us Section
+.why-us-section {
+  padding: 3.5rem 0;
+  background-color: $color-white;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 4.5rem 0;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    padding: 5.5rem 0;
+  }
+
+  .section-badge {
+    color: $primary;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 0.85rem;
+    }
+  }
+
+  .section-title {
+    font-family: $font-family-heading;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $text-main;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 2.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 2.75rem;
+    }
+  }
+
+  .section-lead {
+    font-size: 0.95rem;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .why-us-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: $text-main;
+      margin-bottom: 0.9rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.98rem;
+        margin-bottom: 1.1rem;
+      }
+
+      i {
+        font-size: 1.15rem;
+        color: $primary;
+        flex-shrink: 0;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .consultation-card {
+    background-color: $color-white;
+    border-radius: 20px;
+    padding: 1.75rem 1.25rem;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 2.25rem 2rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      margin-top: 0;
+      padding: 2.5rem 2.25rem;
+    }
+
+    .form-card-title {
+      font-family: $font-family-heading;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.35rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.45rem;
+      }
+    }
+
+    .form-card-subtitle {
+      font-size: 0.85rem;
+      color: $text-muted;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.9rem;
+        margin-bottom: 1.75rem;
+      }
+    }
+
+    .form-control,
+    .form-select {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: $radius-md;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      color: $text-main;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 0.85rem 1.1rem;
+        font-size: 0.95rem;
+      }
+
+      &:focus {
+        background-color: $color-white;
+        border-color: $primary;
+        box-shadow: 0 0 0 4px rgba($primary, 0.15);
+      }
+    }
+
+    .btn-submit-consultation {
+      background-color: $primary;
+      border: 1px solid $primary;
+      color: $color-white;
+      font-family: $font-family-sans;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.8rem 1.25rem;
+      border-radius: $radius-md;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all $transition-base;
+      box-shadow: 0 4px 15px rgba($primary, 0.25);
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.05rem;
+        padding: 0.9rem 1.5rem;
+      }
+
+      &:hover {
+        background-color: $primary-hover;
+        border-color: $primary-hover;
+      }
+    }
+  }
+}

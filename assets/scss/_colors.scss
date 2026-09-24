@@ -1,0 +1,47 @@
+// ==============================================================================
+// CREATEBIZ SCSS COLOR VARIABLES
+// Focused palette: Primary, Secondary, and Tertiary
+// ==============================================================================
+
+// --- Core Brand Colors ---
+$primary:           hsl(160, 60%, 42%); // Primary brand color (Jade Green)
+$primary-hover:     hsl(160, 60%, 35%);
+$primary-light:     hsl(160, 60%, 92%);
+
+$secondary:         hsl(210, 60%, 45%); // Secondary brand color (Royal Blue)
+$secondary-hover:   hsl(210, 60%, 38%);
+$secondary-light:   hsl(210, 60%, 92%);
+
+$tertiary:          hsl(42, 85%, 50%);  // Tertiary brand color (Amber Gold)
+$tertiary-hover:    hsl(42, 85%, 42%);
+$tertiary-light:    hsl(42, 85%, 92%);
+
+// --- Neutral Layout Colors ---
+$color-white:       #ffffff;
+$color-black:       #000000;
+$bg-body:           hsl(160, 20%, 98%);
+$bg-surface:        #ffffff;
+$text-main:         hsl(160, 30%, 12%);
+$text-muted:        hsl(160, 10%, 45%);
+$border-color:      hsl(160, 20%, 90%);
+
+// --- CSS Custom Properties Bridge ---
+:root {
+  --color-primary: #{$primary};
+  --color-primary-hover: #{$primary-hover};
+  --color-primary-light: #{$primary-light};
+
+  --color-secondary: #{$secondary};
+  --color-secondary-hover: #{$secondary-hover};
+  --color-secondary-light: #{$secondary-light};
+
+  --color-tertiary: #{$tertiary};
+  --color-tertiary-hover: #{$tertiary-hover};
+  --color-tertiary-light: #{$tertiary-light};
+
+  --color-bg-body: #{$bg-body};
+  --color-bg-surface: #{$bg-surface};
+  --color-text-main: #{$text-main};
+  --color-text-muted: #{$text-muted};
+  --color-border: #{$border-color};
+}
