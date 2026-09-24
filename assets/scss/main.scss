@@ -28,3 +28,16 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
+
+// Container Max-Width for 1600px Breakpoint (xxxl)
+@media (min-width: $breakpoint-xxxl) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: $container-xxxl;
+  }
+}
+

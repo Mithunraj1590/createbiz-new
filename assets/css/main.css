@@ -2415,4 +2415,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/*# sourceMappingURL=main.css.map */
+@media (min-width: 1600px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1520px;
+  }
+}
