@@ -731,3 +731,179 @@
     }
   }
 }
+
+/* Beyond Company Formation Section Styles */
+.beyond-formation-section {
+  .eyebrow-line {
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background-color: #10b981;
+    border-radius: 9999px;
+  }
+
+  .text-emerald {
+    color: #10b981 !important;
+  }
+
+  .bg-emerald-soft {
+    background-color: rgba(16, 185, 129, 0.1);
+  }
+
+  .btn-emerald {
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: #059669;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+      transform: translateY(-2px);
+    }
+  }
+
+  .skyline-image-card {
+    height: 220px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      height: 260px;
+    }
+
+    .skyline-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .skyline-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.6) 100%);
+    }
+  }
+
+  .beyond-timeline-container {
+    margin-top: -80px;
+    z-index: 2;
+    padding-top: 10px;
+
+    @media (min-width: 992px) {
+      margin-top: -110px;
+    }
+  }
+
+  .timeline-svg-line {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .beyond-step-card {
+    border: 1px solid #e2e8f0 !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: #ffffff;
+
+    &.active-card {
+      border-color: #10b981 !important;
+      box-shadow: 0 12px 30px -5px rgba(16, 185, 129, 0.18) !important;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.1) !important;
+      border-color: #10b981 !important;
+
+      .step-icon-box {
+        background-color: #10b981;
+        color: #ffffff;
+      }
+    }
+
+    .step-icon-box {
+      width: 40px;
+      height: 40px;
+      transition: all 0.2s ease;
+    }
+
+    .step-text {
+      line-height: 1.45;
+      font-size: 0.8125rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .border-start-lg {
+      border-left: 1px solid #e2e8f0;
+    }
+  }
+}
+
+/* Business Activities Section Styles */
+.business-activities-section {
+  .eyebrow-line {
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background-color: #10b981;
+    border-radius: 9999px;
+  }
+
+  .text-emerald {
+    color: #10b981 !important;
+  }
+
+  .bg-emerald-soft {
+    background-color: rgba(16, 185, 129, 0.1);
+  }
+
+  .activity-grid-wrapper {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+  }
+
+  .activity-tile {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      background-color: #f0fdf4;
+
+      .activity-icon-box {
+        background-color: #10b981;
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .activity-icon-box {
+    width: 48px;
+    height: 48px;
+    transition: all 0.2s ease;
+  }
+
+  .hover-arrow {
+    &:hover i {
+      transform: translateX(4px);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .border-start-md {
+      border-left: 1px solid #f1f5f9;
+    }
+  }
+}
