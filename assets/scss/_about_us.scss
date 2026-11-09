@@ -627,3 +627,93 @@
     }
   }
 }
+
+// ==============================================================================
+// EDITORIAL LEADERSHIP TEAM SECTION (SWISS/MINIMALIST AESTHETIC)
+// ==============================================================================
+.editorial-team-section {
+  padding: 5.5rem 0 6.5rem;
+  background-color: #fafaf9;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 0);
+  background-size: 28px 28px;
+  border-top: 1px solid #e5e7eb;
+  position: relative;
+
+  .editorial-team-title {
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 500;
+    color: #111827;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.5rem;
+
+    .editorial-arrow {
+      font-size: 0.42em;
+      vertical-align: middle;
+      font-weight: 300;
+      color: #111827;
+      display: inline-block;
+      transform: translateY(-0.15em);
+      margin-left: 0.35rem;
+    }
+  }
+
+  .tag-letter-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid #111827;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #111827;
+    font-family: 'Inter', monospace, sans-serif;
+    line-height: 1;
+  }
+
+  .tag-leadership-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #4b5563;
+    letter-spacing: 0.02em;
+  }
+
+  .editorial-team-lead {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    line-height: 1.5;
+    color: #1f2937;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+  }
+
+  .editorial-team-card {
+    position: relative;
+    overflow: hidden;
+
+    .editorial-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 4.8;
+      overflow: hidden;
+      background-color: #e5e7eb;
+      border-radius: 4px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        filter: grayscale(100%) contrast(102%);
+        transition: filter 0.4s ease, transform 0.5s ease;
+      }
+    }
+
+    &:hover .editorial-img-wrap img {
+      filter: grayscale(0%);
+      transform: scale(1.03);
+    }
+  }
+}
