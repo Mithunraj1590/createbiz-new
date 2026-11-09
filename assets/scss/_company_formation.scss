@@ -60,3 +60,112 @@
     }
   }
 }
+
+// Free Zone Process Section Redesign
+.fz-process-section {
+  padding: 4.5rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+
+  .process-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.15rem;
+    padding: 2rem 1.4rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 3px;
+      background: transparent;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+    }
+
+    .process-step-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      background: #ecfdf5;
+      color: #059669;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+      width: fit-content;
+    }
+
+    .process-icon-wrap {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background-color: #ecfdf5;
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .process-title {
+      font-family: $font-family-heading;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .process-desc {
+      font-size: 0.88rem;
+      color: $text-muted;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .process-highlight {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 1rem;
+      border-top: 1px dashed #e2e8f0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #059669;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: #a7f3d0;
+      box-shadow: 0 16px 36px -8px rgba(16, 185, 129, 0.16);
+
+      &::before {
+        background: #10b981;
+      }
+
+      .process-icon-wrap {
+        background-color: #10b981;
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

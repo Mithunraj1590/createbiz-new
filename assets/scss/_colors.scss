@@ -1,20 +1,21 @@
 // ==============================================================================
 // CREATEBIZ SCSS COLOR VARIABLES
-// Focused palette: Primary, Secondary, and Tertiary
+// Theme Color: Jade Green / Emerald (#10b981) - Single unified theme palette
 // ==============================================================================
 
-// --- Core Brand Colors ---
-$primary:           hsl(160, 60%, 42%); // Primary brand color (Jade Green)
-$primary-hover:     hsl(160, 60%, 35%);
-$primary-light:     hsl(160, 60%, 92%);
+// --- Core Brand Theme Colors (Emerald / Jade Green) ---
+$primary:           hsl(160, 60%, 42%); // Primary theme brand color (#10b981 / Jade Green)
+$primary-hover:     hsl(160, 60%, 35%); // Darker theme shade for hover (#059669)
+$primary-light:     hsl(160, 60%, 92%); // Soft tint for icon boxes & backgrounds (#ecfdf5)
 
-$secondary:         hsl(210, 60%, 45%); // Secondary brand color (Royal Blue)
-$secondary-hover:   hsl(210, 60%, 38%);
-$secondary-light:   hsl(210, 60%, 92%);
+// Monochromatic Theme Palette (strictly theme color shades)
+$secondary:         hsl(160, 60%, 35%); // Deep emerald accent (#059669)
+$secondary-hover:   hsl(160, 60%, 28%); // Deeper emerald (#047857)
+$secondary-light:   hsl(160, 60%, 96%); // Ultra light emerald tint (#f0fdf4)
 
-$tertiary:          hsl(42, 85%, 50%);  // Tertiary brand color (Amber Gold)
-$tertiary-hover:    hsl(42, 85%, 42%);
-$tertiary-light:    hsl(42, 85%, 92%);
+$tertiary:          hsl(160, 50%, 55%); // Mint emerald highlight (#34d399)
+$tertiary-hover:    hsl(160, 60%, 42%); // Theme green (#10b981)
+$tertiary-light:    hsl(160, 60%, 96%); // Ultra light emerald tint (#f0fdf4)
 
 // --- Neutral Layout Colors ---
 $color-white:       #ffffff;
@@ -44,4 +45,70 @@ $border-color:      hsl(160, 20%, 90%);
   --color-text-main: #{$text-main};
   --color-text-muted: #{$text-muted};
   --color-border: #{$border-color};
+
+  // Bootstrap Framework Variable Overrides
+  --bs-primary: #10b981;
+  --bs-primary-rgb: 16, 185, 129;
+  --bs-link-color: #10b981;
+  --bs-link-hover-color: #059669;
+  --bs-link-color-rgb: 16, 185, 129;
+  --bs-link-hover-color-rgb: 5, 150, 105;
+}
+
+// Global Theme Color Utility Overrides
+.text-primary,
+.text-success {
+  color: #10b981 !important;
+}
+
+.bg-primary,
+.bg-success {
+  background-color: #10b981 !important;
+}
+
+.border-primary,
+.border-success {
+  border-color: #10b981 !important;
+}
+
+.badge.bg-primary,
+.badge.bg-success {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+
+  &:hover, &:focus, &:active {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+    color: #ffffff !important;
+  }
+}
+
+.btn-outline-primary {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+  background-color: transparent !important;
+
+  &:hover, &:focus, &:active {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+  }
+}
+
+.btn-outline-custom {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+  background-color: transparent !important;
+
+  &:hover, &:focus, &:active {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+  }
 }

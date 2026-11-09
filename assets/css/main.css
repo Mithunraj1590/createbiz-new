@@ -1,18 +1,79 @@
 :root {
-  --color-primary: hsl(160, 60%, 42%);
-  --color-primary-hover: hsl(160, 60%, 35%);
-  --color-primary-light: hsl(160, 60%, 92%);
-  --color-secondary: hsl(210, 60%, 45%);
-  --color-secondary-hover: hsl(210, 60%, 38%);
-  --color-secondary-light: hsl(210, 60%, 92%);
-  --color-tertiary: hsl(42, 85%, 50%);
-  --color-tertiary-hover: hsl(42, 85%, 42%);
-  --color-tertiary-light: hsl(42, 85%, 92%);
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+  --color-primary-light: #ecfdf5;
+  --color-secondary: #059669;
+  --color-secondary-hover: #047857;
+  --color-secondary-light: #f0fdf4;
+  --color-tertiary: #34d399;
+  --color-tertiary-hover: #10b981;
+  --color-tertiary-light: #f0fdf4;
   --color-bg-body: hsl(160, 20%, 98%);
   --color-bg-surface: #ffffff;
   --color-text-main: hsl(160, 30%, 12%);
   --color-text-muted: hsl(160, 10%, 45%);
   --color-border: hsl(160, 20%, 90%);
+
+  --bs-primary: #10b981;
+  --bs-primary-rgb: 16, 185, 129;
+  --bs-link-color: #10b981;
+  --bs-link-hover-color: #059669;
+  --bs-link-color-rgb: 16, 185, 129;
+  --bs-link-hover-color-rgb: 5, 150, 105;
+}
+
+.text-primary,
+.text-success {
+  color: #10b981 !important;
+}
+
+.bg-primary,
+.bg-success {
+  background-color: #10b981 !important;
+}
+
+.border-primary,
+.border-success {
+  border-color: #10b981 !important;
+}
+
+.badge.bg-primary,
+.badge.bg-success {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #059669 !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-primary {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+  background-color: transparent !important;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-custom {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+  background-color: transparent !important;
+}
+.btn-outline-custom:hover, .btn-outline-custom:focus, .btn-outline-custom:active {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
 }
 
 .site-header {
@@ -2092,7 +2153,7 @@
 }
 
 .page-hero {
-  background: linear-gradient(135deg, rgba(16.8%, 67.2%, 50.4%, 0.05) 0%, rgba(18%, 45%, 72%, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(16, 185, 129, 0.02) 100%);
   padding: 3rem 0 2.5rem 0;
   border-bottom: 1px solid hsl(160, 20%, 90%);
 }
@@ -2476,7 +2537,7 @@
   }
 }
 .about-hero .page-title .text-gradient {
-  background: linear-gradient(135deg, #34d399 0%, #fbbf24 100%);
+  background: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2518,7 +2579,7 @@
   width: 58px;
   height: 58px;
   border-radius: 0.75rem;
-  background: linear-gradient(135deg, rgba(16.8%, 67.2%, 50.4%, 0.1) 0%, rgba(18%, 45%, 72%, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.03) 100%);
   color: hsl(160, 60%, 42%);
   display: flex;
   align-items: center;
@@ -2689,7 +2750,7 @@
   width: 64px;
   height: 64px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(16.8%, 67.2%, 50.4%, 0.12) 0%, rgba(18%, 45%, 72%, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0.04) 100%);
   color: hsl(160, 60%, 42%);
   display: flex;
   align-items: center;
@@ -3806,6 +3867,116 @@ a.btn:focus {
 .accordion-body {
   padding: 1.25rem 1.5rem 1.5rem;
   background-color: #ffffff;
+}
+
+/* Free Zone Process Section Redesign */
+.fz-process-section {
+  padding: 4.5rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+.fz-process-section .process-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.15rem;
+  padding: 2rem 1.4rem;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fz-process-section .process-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 3px;
+  background: transparent;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.fz-process-section .process-card .process-step-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.fz-process-section .process-card .process-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background-color: #ecfdf5;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.fz-process-section .process-card .process-title {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.fz-process-section .process-card .process-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.fz-process-section .process-card .process-highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 1rem;
+  border-top: 1px dashed #e2e8f0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #059669;
+}
+
+.fz-process-section .process-card .process-highlight i {
+  font-size: 1rem;
+  color: #10b981;
+}
+
+.fz-process-section .process-card:hover {
+  transform: translateY(-6px);
+  border-color: #a7f3d0;
+  box-shadow: 0 16px 36px -8px rgba(16, 185, 129, 0.16);
+}
+
+.fz-process-section .process-card:hover::before {
+  background: #10b981;
+}
+
+.fz-process-section .process-card:hover .process-icon-wrap {
+  background-color: #10b981;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=main.css.map */
