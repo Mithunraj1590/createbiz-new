@@ -715,5 +715,32 @@
       filter: grayscale(0%);
       transform: scale(1.03);
     }
+
+    .editorial-member-info {
+      padding-top: 1rem;
+
+      .editorial-member-name {
+        font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #111827;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.2rem;
+        transition: color 0.2s ease;
+      }
+
+      .editorial-member-role {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.85rem;
+        color: #64748b;
+        font-weight: 500;
+        display: block;
+        line-height: 1.4;
+      }
+    }
+
+    &:hover .editorial-member-name {
+      color: #10b981;
+    }
   }
 }
