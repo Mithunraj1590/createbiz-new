@@ -191,7 +191,8 @@
   @media (min-width: $breakpoint-lg) {
     .nav-item.dropdown:hover > .dropdown-menu,
     .nav-item.dropdown:hover > .megamenu,
-    .nav-item.has-megamenu:hover > .megamenu {
+    .nav-item.has-megamenu:hover > .megamenu,
+    .nav-item.has-megamenu.is-hovered > .megamenu {
       display: block !important;
       opacity: 1;
       visibility: visible;
@@ -200,7 +201,8 @@
     }
 
     .nav-item.dropdown:hover > .nav-link,
-    .nav-item.has-megamenu:hover > .nav-link {
+    .nav-item.has-megamenu:hover > .nav-link,
+    .nav-item.has-megamenu.is-hovered > .nav-link {
       color: $primary;
 
       i.bi-chevron-down {
@@ -209,6 +211,23 @@
 
       &::after {
         transform: scaleX(1);
+      }
+    }
+
+    // Downward hover bridge from nav-link to navbar bottom
+    .nav-item.has-megamenu > .nav-link {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -35px;
+        left: 0;
+        right: 0;
+        background: transparent;
+        z-index: 10;
+        pointer-events: auto;
       }
     }
   }
@@ -267,16 +286,17 @@
         z-index: 10;
       }
 
-      // Invisible hover bridge between navbar and megamenu
+      // Invisible hover bridge between navbar and megamenu (overlapping upward clearance)
       &::after {
         content: '';
         position: absolute;
-        top: -16px;
+        top: -45px;
         left: 0;
         right: 0;
-        height: 16px;
+        height: 50px;
         background: transparent;
         z-index: 5;
+        pointer-events: auto;
       }
     }
 
@@ -790,7 +810,7 @@
 @keyframes megaMenuDropdownFade {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(0);
   }
   to {
     opacity: 1;
