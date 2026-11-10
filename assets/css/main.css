@@ -1495,7 +1495,7 @@
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: continuousLogoFlow 32s linear infinite;
+  animation: continuousLogoFlow 36s linear infinite;
 }
 .trusted-section .logos-scroller-container:hover .logos-scroller-track {
   animation-play-state: paused;
@@ -1509,62 +1509,29 @@
 .trusted-section .scroller-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
   background: #ffffff;
   border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 9999px;
-  padding: 0.5rem 1.15rem 0.5rem 0.65rem;
+  border-radius: 14px;
+  width: 96px;
+  height: 96px;
+  padding: 8px;
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
-  white-space: nowrap;
   user-select: none;
+  flex-shrink: 0;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .trusted-section .scroller-item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: #10b981;
-  box-shadow: 0 6px 16px -2px rgba(16, 185, 129, 0.18);
+  box-shadow: 0 8px 18px -2px rgba(16, 185, 129, 0.2);
   cursor: pointer;
 }
-.trusted-section .scroller-item .item-icon-wrap {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  border-radius: 50%;
-  background: #ecfdf5;
-  color: #059669;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.05rem;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-.trusted-section .scroller-item:hover .item-icon-wrap {
-  background: #10b981;
-  color: #ffffff;
-  transform: scale(1.06);
-}
-.trusted-section .scroller-item .item-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-.trusted-section .scroller-item .item-text .org-name {
-  font-family: "Outfit", system-ui, -apple-system, sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #0f172a;
-  transition: color 0.2s ease;
-}
-.trusted-section .scroller-item:hover .item-text .org-name {
-  color: #047857;
-}
-.trusted-section .scroller-item .item-text .org-type {
-  font-size: 0.7rem;
-  color: #64748b;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+.trusted-section .scroller-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 @media (min-width: 768px) {
   .trusted-section .scroller-group {
@@ -1572,19 +1539,10 @@
     padding-right: 1.5rem;
   }
   .trusted-section .scroller-item {
-    padding: 0.55rem 1.25rem 0.55rem 0.75rem;
-  }
-  .trusted-section .scroller-item .item-icon-wrap {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    font-size: 1.15rem;
-  }
-  .trusted-section .scroller-item .item-text .org-name {
-    font-size: 0.92rem;
-  }
-  .trusted-section .scroller-item .item-text .org-type {
-    font-size: 0.72rem;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 16px;
   }
 }
 @keyframes continuousLogoFlow {
@@ -1912,6 +1870,17 @@
 }
 .border-emerald-soft {
   border-color: rgba(16, 185, 129, 0.2) !important;
+}
+.btn-outline-emerald {
+  color: #00875a !important;
+  background-color: transparent !important;
+  border: 1.5px solid #00875a !important;
+  transition: all 0.2s ease;
+}
+.btn-outline-emerald:hover {
+  color: #ffffff !important;
+  background-color: #00875a !important;
+  border-color: #00875a !important;
 }
 
 /* Beyond Company Formation Section Styles */
@@ -3980,9 +3949,10 @@ a.btn:focus {
 }
 
 /* ==============================================================================
-   FREE ZONE HERO BANNER REDESIGN
+   FREE ZONE & OFFSHORE HERO BANNER REDESIGN
    ============================================================================== */
-.freezone-hero {
+.freezone-hero,
+.offshore-hero {
   position: relative;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(6, 78, 59, 0.90) 50%, rgba(15, 23, 42, 0.96) 100%),
               url("../images/mainland-hero.jpg") center/cover no-repeat;
@@ -3993,12 +3963,14 @@ a.btn:focus {
 }
 
 @media (min-width: 992px) {
-  .freezone-hero {
+  .freezone-hero,
+  .offshore-hero {
     padding: 5.5rem 0 6.5rem;
   }
 }
 
-.freezone-hero .hero-glow-1 {
+.freezone-hero .hero-glow-1,
+.offshore-hero .hero-glow-1 {
   position: absolute;
   top: -160px;
   right: -120px;
@@ -4010,7 +3982,8 @@ a.btn:focus {
   z-index: 1;
 }
 
-.freezone-hero .hero-glow-2 {
+.freezone-hero .hero-glow-2,
+.offshore-hero .hero-glow-2 {
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -4022,17 +3995,20 @@ a.btn:focus {
   z-index: 1;
 }
 
-.freezone-hero .container {
+.freezone-hero .container,
+.offshore-hero .container {
   position: relative;
   z-index: 2;
 }
 
-.freezone-hero .breadcrumb {
+.freezone-hero .breadcrumb,
+.offshore-hero .breadcrumb {
   margin-bottom: 1.25rem;
   font-size: 0.92rem;
 }
 
-.freezone-hero .breadcrumb .breadcrumb-item a {
+.freezone-hero .breadcrumb .breadcrumb-item a,
+.offshore-hero .breadcrumb .breadcrumb-item a {
   color: #ffffff !important;
   font-weight: 500;
   text-decoration: underline;
@@ -4041,22 +4017,26 @@ a.btn:focus {
   transition: opacity 0.2s, color 0.2s;
 }
 
-.freezone-hero .breadcrumb .breadcrumb-item a:hover {
+.freezone-hero .breadcrumb .breadcrumb-item a:hover,
+.offshore-hero .breadcrumb .breadcrumb-item a:hover {
   opacity: 1;
   color: #6ee7b7 !important;
 }
 
-.freezone-hero .breadcrumb .breadcrumb-item.active {
+.freezone-hero .breadcrumb .breadcrumb-item.active,
+.offshore-hero .breadcrumb .breadcrumb-item.active {
   color: #a7f3d0 !important;
   font-weight: 600;
   opacity: 1;
 }
 
-.freezone-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+.freezone-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.offshore-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.freezone-hero .page-title {
+.freezone-hero .page-title,
+.offshore-hero .page-title {
   font-family: "Outfit", "Inter", system-ui, sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   font-weight: 800;
@@ -4067,7 +4047,8 @@ a.btn:focus {
   max-width: 860px;
 }
 
-.freezone-hero .hero-lead {
+.freezone-hero .hero-lead,
+.offshore-hero .hero-lead {
   color: rgba(255, 255, 255, 0.88) !important;
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   line-height: 1.65;
